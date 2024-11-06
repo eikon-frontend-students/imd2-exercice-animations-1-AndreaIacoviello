@@ -121,3 +121,66 @@ video {
   height: 80px;
   background: var(--black);
 }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.button {
+  animation: pulse 1s infinite;
+  border: none;
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+.background {
+  background-repeat: repeat-x;
+  animation: moveBackground 5s linear infinite;
+}
+
+.submit-planes {
+  animation-name: submit;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+@keyframes submit {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
